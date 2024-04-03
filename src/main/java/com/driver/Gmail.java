@@ -8,8 +8,8 @@ public class Gmail extends Email {
     //Inbox: Stores mails. Each mail has date (Date), sender (String), message (String). It is guaranteed that message is distinct for all mails.
     //Trash: Stores mails. Each mail has date (Date), sender (String), message (String)
 
-  private ArrayList<Address> inbox;
-  private ArrayList<Address> trash;
+ final private ArrayList<Address> inbox;
+ final private ArrayList<Address> trash;
     public Gmail(String emailId, int inboxCapacity) {
         super(emailId);
         this.inboxCapacity=inboxCapacity;
@@ -103,7 +103,7 @@ public class Gmail extends Email {
         return this.inboxCapacity;
     }
 
-    private class Address{
+    private static class Address{
         String sender;
         Date date;
         String message;
