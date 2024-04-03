@@ -25,5 +25,65 @@ public class Email {
         // 3. It contains at least one lowercase letter
         // 4. It contains at least one digit
         // 5. It contains at least one special character. Any character apart from alphabets and digits is a special character
+        if(oldPassword==newPassword){
+            return;
+        }
+
+        if( !(newPassword.contains("@") || newPassword.contains("#") || newPassword.contains("!") || newPassword.contains("~") || newPassword.contains("$") || newPassword.contains("%") || newPassword.contains("^") || newPassword.contains("&") || newPassword.contains("*") || newPassword.contains("(") || newPassword.contains(")") || newPassword.contains("-") || newPassword.contains("+") || newPassword.contains("/") || newPassword.contains(":") || newPassword.contains(".") || newPassword.contains(",") || newPassword.contains("<") || newPassword.contains(">") || newPassword.contains("?") || newPassword.contains("|"))){
+            return;
+        }
+        if(newPassword.length()<8){
+            return;
+        }
+        if(true){
+
+            int count=0;
+
+            for (int i=65; i<=97; i++){
+
+                char c= (char)i;
+
+                String str1= Character.toString(c);
+                if(newPassword.contains(str1)){
+                    count=1;
+                }
+
+            }
+            if(count==0){
+                return;
+            }
+        }
+
+        if(true){
+            int count=0;
+
+            for (int i=90; i<=122; i++){
+
+                char c=(char) i;
+
+                String str= Character.toString(c);
+                if(newPassword.contains(str)) {
+                    count = 1;
+                }
+            }
+
+            if (count==0) return;
+        }
+
+        if(true){
+            int count=0;
+            for (int i=0; i<=9; i++){
+                char c=(char)i;
+                String str = Character.toString(c);
+                if(newPassword.contains(str)){
+                    count=1;
+                }
+
+            }
+
+            if (count==0){
+                return;
+            }
+        }
     }
 }
