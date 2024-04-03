@@ -10,7 +10,7 @@ public class Gmail extends Email {
 
   public ArrayList<Address> inbox;
    public ArrayList<Address> trash;
-    public Gmail(String emailId, int inboxCapacity) {
+     Gmail(String emailId, int inboxCapacity) {
         super(emailId);
         this.inboxCapacity=inboxCapacity;
         inbox=new ArrayList<>();
