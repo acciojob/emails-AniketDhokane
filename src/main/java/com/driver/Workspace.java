@@ -24,6 +24,7 @@ public class Workspace extends Gmail{
     }
 
     public int findMaxMeetings(){
+
         // find the maximum number of meetings you can attend
         // 1. At a particular time, you can be present in at most one meeting
         // 2. If you want to attend a meeting, you must join it at its start time and leave at end time.
@@ -59,7 +60,8 @@ public class Workspace extends Gmail{
         return m.size();
     }
     class mycomparator implements Comparator<Meeting> {
-        @Override public int compare(Meeting m1, Meeting m2)
+        @Override
+        public int compare(Meeting m1, Meeting m2)
         {
             if (m1.getEndTime().compareTo(m2.getEndTime())<0) {
 
@@ -74,7 +76,7 @@ public class Workspace extends Gmail{
                 return 1;
             }
             return 0;
-    }
+        }
 
   }
 }
